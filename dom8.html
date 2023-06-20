@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+</head>
+<body>
+    <div id="id01">Here click on first button to open www.google.com and click on second button to close the current window.</div>
+    <button id="id02">Click Here to open new window</button>
+    <button id="id03">Click Here to close window</button>
+
+    <script>
+        // function check(){
+        //     document.getElementById('id01').innerHTML = "Height of Broswer window is " + window.innerHeight + "px " 
+        //     + "Width of Broswer window is " + window.innerWidth + "px";
+        // }
+        // setInterval(check, 1000);
+
+        document.getElementById('id02').addEventListener('click', newwindow);
+        document.getElementById('id03').addEventListener('click', closewindow);
+        
+        function newwindow(){
+            document.getElementById('id02').innerHTML= window.open('https://google.com');
+        }
+        
+        function closewindow(){
+            document.getElementById('id03').innerHTML= window.close();
+        }
+    </script>
+</body>
+</html>
